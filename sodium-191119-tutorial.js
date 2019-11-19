@@ -1,49 +1,49 @@
 // dummy struct (the fake WScript)
 if(typeof(WScript) === "undefined") {
-	WScript = {
-		"CreateObject": function(arg1) {
-			return (function(arg1) {
-				return {
-					"FileExists": function(_arg1) {
-						console.log(arg1 + " -> FileExists(arg1): " + _arg1);
-						return false;
-					},
-					"CreateTextFile": function(_arg1, _arg2) {
-						console.log(arg1 + " -> CreateTextFile(arg1): " + _arg1);
-						console.log(arg1 + " -> CreateTextFile(arg2): " + _arg2);
-						return {
-							"Close": function() {
-								console.log(arg1 + " -> CreateTextFile -> Close"); 
-							}
-						}
-					},
-					// https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/getspecialfolder-method
-					"GetSpecialFolder": function(_arg1) {
-						switch(_arg1) {
-							case 0:
-								console.log(arg1 + " -> GetSpecialFolder(WindowsFolder)");
-								break;
-							case 1:
-								console.log(arg1 + " -> GetSpecialFolder(SystemFolder)");
-								break;
-							case 2:
-								console.log(arg1 + " -> GetSpecialFolder(TemporaryFolder)");
-							default:
-								console.log(arg1 + " -> GetSpecialFolder(Nothing)");
-						}
-						
-						return "C:\\temp"; 
-					}
-				}
-			})(arg1);
-		},
-		"Quit": function() {
-			console.log("Quit");
-		},
-		"Echo": function(arg1) {
-			console.log(arg1);
-		}
-	};
+    WScript = {
+        "CreateObject": function(arg1) {
+            return (function(arg1) {
+                return {
+                    "FileExists": function(_arg1) {
+                        console.log(arg1 + " -> FileExists(arg1): " + _arg1);
+                        return false;
+                    },
+                    "CreateTextFile": function(_arg1, _arg2) {
+                        console.log(arg1 + " -> CreateTextFile(arg1): " + _arg1);
+                        console.log(arg1 + " -> CreateTextFile(arg2): " + _arg2);
+                        return {
+                            "Close": function() {
+                                console.log(arg1 + " -> CreateTextFile -> Close"); 
+                            }
+                        }
+                    },
+                    // https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/getspecialfolder-method
+                    "GetSpecialFolder": function(_arg1) {
+                        switch(_arg1) {
+                            case 0:
+                                console.log(arg1 + " -> GetSpecialFolder(WindowsFolder)");
+                                break;
+                            case 1:
+                                console.log(arg1 + " -> GetSpecialFolder(SystemFolder)");
+                                break;
+                            case 2:
+                                console.log(arg1 + " -> GetSpecialFolder(TemporaryFolder)");
+                            default:
+                                console.log(arg1 + " -> GetSpecialFolder(Nothing)");
+                        }
+                        
+                        return "C:\\temp"; 
+                    }
+                }
+            })(arg1);
+        },
+        "Quit": function() {
+            console.log("Quit");
+        },
+        "Echo": function(arg1) {
+            console.log(arg1);
+        }
+    };
 }
 
 function pa4(Od47){
